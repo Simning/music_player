@@ -15,11 +15,11 @@ names.forEach((name, index) => {
 
   // 각 아티클을 회전하고 화면 밖으로 이동시킴
   list[index].style.transform = `rotate(${deg * index}deg) translateY(-100vh)`;
-  pic.style.backgroundImage = `url(/img/${name}.jpg)`; // 이미지에 배경 이미지 설정
+  pic.style.backgroundImage = `url(img/${name}.jpg)`; // 이미지에 배경 이미지 설정
   h2.innerText = name; // 텍스트에 아티클 이름 설정
 
   const audio = document.createElement('audio'); // 오디오 요소 생성
-  audio.setAttribute('src', `/music/${name}.mp3`); // 오디오 소스 설정
+  audio.setAttribute('src', `music/${name}.mp3`); // 오디오 소스 설정
   audio.setAttribute('loop', 'loop'); // 오디오 반복 재생 설정
   list[index].append(audio); // 각 아티클에 오디오 요소 추가
 });
